@@ -2,12 +2,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`
-    }}
-  >
+import { Menu } from '../../styled'
+
+const Header = ({ siteTitle, props }) => (
+  <Menu>
     <div
       style={{
         margin: `0 auto`,
@@ -27,7 +25,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-  </header>
+  </Menu>
 )
 
 Header.propTypes = {

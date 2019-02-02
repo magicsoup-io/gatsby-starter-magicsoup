@@ -1,17 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Hero from '../components/Hero'
+import {
+  Hero,
+  Layout,
+  SEO,
+} from '../components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { Flex } from '@magicsoup.io/stock'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Hero />
-    <Link to="/components/">Go to components</Link>
+    <Flex
+      p={[5]}
+      flexDirection="column"
+    >
+      <Hero />
+    </Flex>
   </Layout>
 )
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Flex, Box, Text } from '@magicsoup.io/stock'
+import { Flex, Box, Heading, Text } from '@magicsoup.io/stock'
 const Hero = () => (
   <StaticQuery
     query={graphql`
@@ -12,28 +12,17 @@ const Hero = () => (
       }
     `}
     render={data => (
-      <Flex flexDirection="row">
-        <Flex 
-          pt={5}
-          width={2/3}
-          color='black'
-          justifyContent="end"
-        >
-          <Box>
-            <Text
-              fontSize={[5]}
-              textAlign="right"
-            >
-              {data.heroJson.displayTitle}
-            </Text>
-          </Box>
-        </Flex>
-        <Box
-          p={3}
-          width={1/3}
-          color='black'
-        >
-          {data.heroJson.subTitle}
+      <Flex
+        pt={6}
+        alignItems="center"
+      >
+        <Box>
+          <Heading fontSize={[5]}>
+            {data.heroJson.displayTitle}
+          </Heading>
+          <Text>
+            {data.heroJson.subTitle}
+          </Text>
         </Box>
       </Flex>
     )}

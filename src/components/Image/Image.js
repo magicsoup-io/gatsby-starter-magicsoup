@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import { Image as SoupImage } from '@magicsoup.io/stock'
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -26,7 +26,11 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => 
+      <SoupImage>
+        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      </SoupImage>
+    }
   />
 )
 export default Image

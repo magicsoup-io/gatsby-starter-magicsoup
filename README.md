@@ -10,7 +10,7 @@ The GatsbyJS Starter with our react component library soup. - Just add some wate
     ```sh
     gatsby new my-magicsoup-starter https://github.com/magicsoup-io/gatsby-starter-magicsoup
     npm install 
-    ## Or use yarn as a package manager if you prefer.
+    ## Or use yarn as a package manager if you prefer. 
     ```
 
 ## What's special about our magicsoup.io starter?
