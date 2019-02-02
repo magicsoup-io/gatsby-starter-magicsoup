@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { ThemeProvider } from 'styled-components'
 import theme from '../../styled/theme'
