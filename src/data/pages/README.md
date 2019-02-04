@@ -1,3 +1,7 @@
+---
+title: "ReadMe"
+date: "2017-08-10"
+---
 # gatsby-starter-magicsoup
 The GatsbyJS Starter with our react component library soup. - Just add some water!
 

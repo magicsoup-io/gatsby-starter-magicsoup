@@ -1,15 +1,7 @@
 import React, { Fragment } from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
-import { ThemeProvider } from 'styled-components'
-import {
-  theme,
-  GlobalStyle
-} from '../../styled'
 import { StaticQuery, graphql } from "gatsby"
-
-import { Header, Footer } from "../"
-
+import { Header, Footer } from "../index"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,14 +15,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <ThemeProvider theme={theme}>
-        <Fragment>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <GlobalStyle />
-            <main>{children}</main>
-            <Footer />
-        </Fragment>
-      </ThemeProvider>
+      <Fragment>
+        <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+        <Footer />
+      </Fragment>
     )}
   />
 )
