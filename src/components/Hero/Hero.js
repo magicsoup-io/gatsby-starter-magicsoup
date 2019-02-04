@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Flex, Box, Heading, Text } from '@magicsoup.io/stock'
+
 const Hero = () => (
   <StaticQuery
     query={graphql`

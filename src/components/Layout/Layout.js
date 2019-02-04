@@ -2,11 +2,14 @@ import React, { Fragment } from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { ThemeProvider } from 'styled-components'
-import theme from '../../styled/theme'
+import {
+  theme,
+  GlobalStyle
+} from '../../styled'
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "../Header"
-import "./Layout.css"
+import { Header, Footer } from "../"
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,15 +26,9 @@ const Layout = ({ children }) => (
       <ThemeProvider theme={theme}>
         <Fragment>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div>
+          <GlobalStyle />
             <main>{children}</main>
-            <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>&nbsp;and&nbsp;
-              <a href="https://github.com/magicsoup-io/gatsby-starter-magicsoup">magigsoup.io</a>
-            </footer>
-          </div>
+            <Footer />
         </Fragment>
       </ThemeProvider>
     )}
