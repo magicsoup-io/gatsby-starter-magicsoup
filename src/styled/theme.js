@@ -1,25 +1,21 @@
 
-const primary = '#4A3838'
+const primary = 'purple'
 const primaryLight = '#534141'
 const primaryLighter = '#685353'
+const fontSizes = [
+  12, 16, 18, 22, 26, 30, 42, 50
+]
+const space = [
+  0, 4, 8, 16, 32, 64, 128, 256
+]
 
 export default {
+  ...fontSizes,
+  ...space,
   breakpoints: ['40em', '52em', '64em'],
-  fontSizes: [
-    12, 16, 18, 22, 26, 30, 42, 50
-  ],
   colors: {
     primary: primary,
-    primaryLight: primaryLight,
-    primaryLighter: primaryLighter,
-    primaryTransparent: 'rgba(74, 56, 56, 0.5)',
-    font: '#705757',
-    cream: '#f4f0ed',
-    creamLight: '#E4D9D9'
   },
-  space: [
-    0, 4, 8, 16, 32, 64, 128, 256
-  ],
   fonts: {
     sans: '"Overpass", system-ui, sans-serif'
   },
@@ -45,6 +41,24 @@ export default {
         color: primary,
         backgroundColor: '#fff'
       }
+    }
+  },
+  headings: {
+    h1: {
+      fontSize: fontSizes[6],
+      fontWeight: 700,
+    },
+    h2: {
+      fontSize: fontSizes[5],
+      fontWeight: 400,
+    },
+    h3: {
+      fontSize: fontSizes[4],
+      fontWeight: 400,
+    },
+    h4: {
+      fontSize: fontSizes[2],
+      fontWeight: 400,
     }
   },
   icons: {

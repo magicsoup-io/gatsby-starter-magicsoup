@@ -6,17 +6,22 @@ import {
   SEO,
 } from '../components'
 
-import { Flex } from '@magicsoup.io/stock'
+import { 
+  Container 
+} from '@magicsoup.io/stock'
+
+import { Link } from 'gatsby'
+import { P } from '../styled'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Flex
-      p={[5]}
-      flexDirection="column"
-    >
-      <Hero />
-    </Flex>
+    <Container p={[7]}>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Hero />
+        <P fontSize={3}>
+          <Link to="/pages/readme">Go to Readme</Link>
+        </P>
+    </Container>
   </Layout>
 )
 

@@ -1,10 +1,4 @@
-export { default as Menu } from './elements/Menu'
-export { default as Container } from './blocks/Container'
 export { default as Section } from './blocks/Section'
 
-export { default as Headline } from './elements/Headline'
-export { default as H1 } from './elements/H1'
-export { default as H2 } from './elements/H2'
-export { default as H3 } from './elements/H3'
-export { default as H4 } from './elements/H4'
+export { default as Menu } from './elements/Menu'
 export { default as P } from './elements/P'

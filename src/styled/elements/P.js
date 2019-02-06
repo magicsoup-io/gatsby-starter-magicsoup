@@ -2,8 +2,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Text } from '@magicsoup.io/stock'
-import theme from '../theme'
-
 
 const P = styled(Text)`
   line-height: 1.55;
@@ -14,9 +12,8 @@ const P = styled(Text)`
 `
 
 P.defaultProps = {
-  color: 'font',
-  fontSize: 2,
   as: 'p',
+  fontSize: 2,
   mt: 3,
   mb: 0,
   p: 0,

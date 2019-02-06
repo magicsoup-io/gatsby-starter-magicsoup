@@ -18,7 +18,7 @@ const Hero = () => (
         alignItems="center"
       >
         <Box>
-          <Heading fontSize={[5]}>
+          <Heading as="h1" variant="h1">
             {data.heroJson.displayTitle}
           </Heading>
           <Text>
