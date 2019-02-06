@@ -3,6 +3,9 @@ module.exports = {
     title: `Gatsby MagicSoup.io`,
     description: `An instant-starter for magicsoup.io with GatsbyJS`,
     author: `@magicsoup.io`,
+    image: `src/images/website-preview.jpg`,
+    siteUrl: `https://www.gatsbyjs.org`,
+    googleSiteVerification: `[place-google-webmaster-tools-key-here]`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +45,31 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

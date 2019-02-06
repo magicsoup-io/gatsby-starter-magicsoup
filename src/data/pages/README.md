@@ -1,5 +1,6 @@
 ---
-title: "ReadMe"
+slug: readme
+title: "Readme.md"
 date: "2017-08-10"
 ---
 # gatsby-starter-magicsoup

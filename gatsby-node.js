@@ -15,12 +15,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+  // const defaultPage = path.resolve(`src/templates/default-page.js`)
+
   return graphql(`
     {
       allMarkdownRemark {
         edges {
           node {
-            fields {
+            frontmatter {
               slug
             }
           }
@@ -28,14 +30,21 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log(node.frontmatter.slug)
       createPage({
-        path: node.fields.slug,
+        slug: node.frontmatter.slug,
+        path: `/pages/${node.frontmatter.slug}`,
         component: path.resolve(`./src/templates/default-page.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          slug: node.fields.slug,
+          slug: node.frontmatter.slug,
+          context: {}, // additional data can be passed via context
         },
       })
     })
