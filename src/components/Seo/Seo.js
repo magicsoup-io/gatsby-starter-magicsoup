@@ -3,19 +3,26 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
+
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
+        const siteUrl = data.site.siteMetadata.siteUrl || 'http://localhost:8000'
         const metaDescription =
           description || data.site.siteMetadata.description
+        const metaTitle =
+          title || data.site.siteMetadata.title
+        const metaImage =
+          image || data.site.siteMetadata.image
+        const googleSiteVerification = data.site.siteMetadata.googleSiteVerification
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
-            title={title}
+            title={metaTitle}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
@@ -24,11 +31,15 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:title`,
-                content: title,
+                content: metaTitle,
               },
               {
                 property: `og:description`,
                 content: metaDescription,
+              },
+              {
+                property: `og:image`,
+                content: `${siteUrl}/${metaImage}`,
               },
               {
                 property: `og:type`,
@@ -44,22 +55,34 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:title`,
-                content: title,
+                content: metaTitle,
+              },
+              {
+                name: `twitter:image`,
+                content: `${siteUrl}/${metaImage}`,
               },
               {
                 name: `twitter:description`,
                 content: metaDescription,
-              },
+              }
             ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
+            .concat(
+              googleSiteVerification 
+                ? {
+                  name: `google-site-verification`,
+                  content: googleSiteVerification
+                } 
+                : []
+            )
+            .concat(
+              keywords.length > 0
+                ? {
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
+                : []
+            )
+            .concat(meta)}
           />
         )
       }}
@@ -68,7 +91,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `de`,
   meta: [],
   keywords: [],
 }
@@ -78,7 +101,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO
@@ -90,6 +113,9 @@ const detailsQuery = graphql`
         title
         description
         author
+        image
+        siteUrl
+        googleSiteVerification
       }
     }
   }
