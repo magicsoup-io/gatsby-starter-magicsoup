@@ -1,0 +1,18 @@
+- url: https://gatsby.magicsoup.io/
+  repo: https://github.com/magicsoup-io/gatsby-starter-magicsoup
+  description: A production ready gatsby starter including the awesome frontend lib MagicSoup.io
+  tags:
+    - SEO
+    - Markdown
+    - Testing
+    - Styling:MagicSoup.io
+  features:
+    - All the features from gatsby-advanced-starter, plus
+    - Uses MagigSoup.io to create awesome UIs
+    - Uses styled-system and styled-components with working SSR
+    - Maps markdown to styled-components
+    - JSON data for specific page data
+    - Webfont loader
+    - Sitemap Generator
+    - Basic-UI
+    - Testsetup with Jest and working examples
