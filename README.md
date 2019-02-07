@@ -18,7 +18,7 @@ The GatsbyJS Starter with our react component library soup. - Just add some wate
 
 1.  **`instant-soup`**: This starter is based on the GatsbyJS default starter, but has our [magicsoup.io/stock](https://github.com/magicsoup-io/magicsoup-stock) module included! So you can use it in your templates and components.
 
-2.  **`no-more-noodels`**: Say good-bye to spaghetti code! Keep
+2.  **`no-more-noodels`**: Say good-bye to spaghetti code!
 
 3.  **`hot-and-spicy`**: This starter will always use the most recent version of [magicsoup.io/stock](https://github.com/magicsoup-io/magicsoup-stock).
 
