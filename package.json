@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-magicsoup",
   "description": "An instant-starter for magicsoup.io with Gatsby",
-  "version": "0.1.0",
-  "author": "zauberware technologies",
+  "version": "0.1.1",
+  "author": "@magicsoup.io",
   "contributors": [
     {
       "name": "Philipp Siegmund",

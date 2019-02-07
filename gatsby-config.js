@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MagicSoup.io`,
+    title: `MagicSoup.io @ Gatsby`,
     description: `An instant-starter for magicsoup.io with GatsbyJS`,
     author: `@magicsoup.io`,
     image: `src/images/website-preview.jpg`,
-    siteUrl: `https://www.gatsbyjs.org`,
+    siteUrl: `https://gatsby.magicsoup.io`,
     googleSiteVerification: `[place-google-webmaster-tools-key-here]`,
   },
   plugins: [
@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-magicsoup`,
-        short_name: `magicsoup`,
+        name: `GatsbyJS Starter with MagicSoup.io`,
+        short_name: `gatsby.magicsoup.io`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
