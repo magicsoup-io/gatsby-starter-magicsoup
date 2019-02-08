@@ -1,4 +1,3 @@
-
 const path = require(`path`)
 const fs = require(`fs-extra`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -12,17 +11,19 @@ exports.onPreBootstrap = () => {
   const transationOut = path.join(__dirname, `/public/locales`)
 
   fs.ensureDir(transationOut, err => {
-    if (err) return console.error(err)
+    console.log(err) // => null
     // dir has now been created, including the directory it is to be placed in
   })
 
   fs.emptyDir(transationOut, err => {
     // Clean dir to remove old trans files
     if (err) return console.error(err)
+    else console.log(`cleaned dir`)
 
     fs.copy(translationIn, transationOut, (err) => {
         // Copy files to public folder
         if (err) console.error(err)
+        else console.log(`files copied`)
       }
     )
   })

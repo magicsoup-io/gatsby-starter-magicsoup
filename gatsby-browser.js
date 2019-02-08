@@ -4,7 +4,7 @@ import { I18nextProvider } from "react-i18next";
 
 import theme from './src/components/styled/theme'
 import GlobalStyle from './src/components/styled/global-styles'
-import i18n from './src/components/i18n'
+import { i18n } from './src/components'
 
 export const wrapRootElement = ({ element }) => {
   return (
