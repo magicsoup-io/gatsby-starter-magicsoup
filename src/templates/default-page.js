@@ -3,13 +3,13 @@ import { graphql } from "gatsby"
 import marksy from 'marksy'
 
 import {
+  P,
   Hero,
   Layout,
   SEO,
 } from '../components'
 
 import {
-  P,
   Flex,
   Box,
   Heading,

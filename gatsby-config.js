@@ -10,30 +10,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    // {
-    //   resolve: 'gatsby-plugin-i18n',
-    //   options: {        
-    //     langKeyDefault: 'en',
-    //     useLangKeyLayout: false,
-    //     markdownRemark: {
-    //       postPage: 'src/templates/default-page.js',
-    //       query: `
-    //       {
-    //           allMarkdownRemark {
-    //               edges {
-    //               node {
-    //                   fields {
-    //                   slug,
-    //                   langKey
-    //                   }
-    //               }
-    //               }
-    //           }
-    //       }
-    //       `
-    //     },
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
