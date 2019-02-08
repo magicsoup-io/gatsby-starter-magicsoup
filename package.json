@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-magicsoup",
   "description": "An instant-starter for magicsoup.io with Gatsby",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "@magicsoup.io",
   "contributors": [
     {
@@ -14,7 +14,7 @@
     }
   ],
   "dependencies": {
-    "@magicsoup.io/stock": "0.0.11",
+    "@magicsoup.io/stock": "^0.0.11",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.112",
     "gatsby-image": "^2.0.29",
