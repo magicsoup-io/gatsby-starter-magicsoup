@@ -8,7 +8,7 @@ import {
 } from '@magicsoup.io/stock'
 import { 
   P,
-} from '../../components'
+} from '../../styled'
 
 const Footer = () => (
   <StaticQuery
