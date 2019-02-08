@@ -1,5 +1,35 @@
 const path = require(`path`)
+const fs = require(`fs-extra`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onPreBootstrap = () => {
+  
+  /**
+   * I18n support - Copies locale files for statis translations into /public folder
+   */
+  const translationIn = path.join(__dirname, `/src/locales`)
+  const transationOut = path.join(__dirname, `/public/locales`)
+
+  fs.ensureDir(transationOut, err => {
+    console.log(err) // => null
+    // dir has now been created, including the directory it is to be placed in
+  })
+
+  fs.emptyDir(transationOut, err => {
+    // Clean dir to remove old trans files
+    if (err) return console.error(err)
+    else console.log(`cleaned dir`)
+
+    fs.copy(translationIn, transationOut, (err) => {
+        // Copy files to public folder
+        if (err) console.error(err)
+        else console.log(`files copied`)
+      }
+    )
+  })
+
+}
+
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions

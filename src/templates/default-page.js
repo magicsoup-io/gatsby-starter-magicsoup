@@ -8,17 +8,14 @@ import {
   SEO,
 } from '../components'
 
-import { 
+import {
+  P,
   Flex,
   Box,
   Heading,
   Image,
   Container,
 } from '@magicsoup.io/stock'
-
-import {
-  P
-} from '../styled'
 
 const compile = marksy({
   // Pass in whatever creates elements for your

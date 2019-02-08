@@ -1,6 +1,7 @@
 ---
 slug: readme
 title: "Readme.md"
+lang: "en"
 date: "2017-08-10"
 ---
 # gatsby-starter-magicsoup

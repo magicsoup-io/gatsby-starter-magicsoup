@@ -1,13 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import {
+  P,
   Layout,
   SEO,
 } from '../components'
-
-import {
- P
-} from '../styled'
 
 import { Heading, Container } from '@magicsoup.io/stock'
 

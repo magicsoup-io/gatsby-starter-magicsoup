@@ -1,8 +1,9 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "flowtype", "jsx-a11y", "import"],
+  "plugins": ["react", "flowtype", "jsx-a11y", "import", "react-hooks"],
   "extends": ["airbnb"],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
     "radix": [
       "error",
       "as-needed"

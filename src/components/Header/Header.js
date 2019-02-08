@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { Menu } from '../../styled'
+import { Menu } from '../../components'
 
 const Header = ({ siteTitle, props }) => (
   <Menu>
