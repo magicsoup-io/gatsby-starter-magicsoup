@@ -1,6 +1,6 @@
 # gatsby-starter-magicsoup
 
-The GatsbyJS Starter with our react component library soup. - Just add some water!
+The GatsbyJS Starter with our react component library soup. - Just add some water! See [demo](https://gatsby.magicsoup.io)
 
 ## Quick start
 
