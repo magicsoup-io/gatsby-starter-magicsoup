@@ -9,9 +9,8 @@ The GatsbyJS Starter with our react component library soup. - Just add some wate
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```sh
-    gatsby new my-magicsoup-starter https://github.com/magicsoup-io/gatsby-starter-magicsoup
-    npm install 
-    ## Or use yarn as a package manager if you prefer. 
+    gatsby new magicsoup-starter https://github.com/magicsoup-io/gatsby-starter-magicsoup
+    cd magicsoup-starter && yarn && npm start 
     ```
 
 ## What's special about our magicsoup.io starter?
