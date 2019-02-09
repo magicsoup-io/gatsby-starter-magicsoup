@@ -3,7 +3,7 @@ module.exports = {
     title: `MagicSoup.io @ Gatsby`,
     description: `An instant-starter for magicsoup.io with GatsbyJS`,
     author: `@magicsoup.io`,
-    image: `src/images/website-preview.jpg`,
+    image: `website-preview.jpg`,
     siteUrl: `https://gatsby.magicsoup.io`,
     googleSiteVerification: `[place-google-webmaster-tools-key-here]`,
   },

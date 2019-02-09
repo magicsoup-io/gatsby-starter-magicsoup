@@ -1,4 +1,5 @@
 {
   "displayTitle": "magicsoup.io",
-  "subTitle": "An instant-starter for magicsoup.io with GatsbyJS"
+  "subTitle": "An instant-starter for magicsoup.io with GatsbyJS",
+  "github": "https://github.com/magicsoup-io/gatsby-starter-magicsoup"
 }

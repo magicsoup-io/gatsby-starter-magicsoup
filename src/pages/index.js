@@ -1,13 +1,17 @@
-import React from "react"
+import React from 'react'
 
 import {
   Hero,
   Layout,
   SEO,
+  Status,
+  Plans,
 } from '../components'
 
 import { 
-  Container 
+  Container ,
+  Box,
+  Flex,
 } from '@magicsoup.io/stock'
 
 import { Link } from 'gatsby'
@@ -15,12 +19,12 @@ import { P } from '../styled'
 
 const IndexPage = () => (
   <Layout>
-    <Container p={[7]}>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Hero />
-        <P fontSize={3}>
-          <Link to="/pages/readme">Go to Readme</Link>
-        </P>
+    <Container>
+      <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
+      <Hero />
+      <Flex fontSize={3} pt={2} justifyContent='flex-end'>
+        <Link to='/pages/readme'>Go to Readme →</Link>
+      </Flex>
     </Container>
   </Layout>
 )

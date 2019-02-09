@@ -1,30 +1,30 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
 
-import { Menu } from '../../styled'
+import { Heading, Container, Box, Flex, Link as MagicLink } from '@magicsoup.io/stock'
+import { Menu, P } from '../../styled'
 
 const Header = ({ siteTitle, props }) => (
   <Menu>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <Container width='100%'>
+      <Flex 
+        justifyContent='space-between'
+        flexWrap='wrap'
+        alignItems='center'>
+        <Heading as='h1' variant='h1' style={{fontSize: 25}}>
+          <Link
+            to='/'
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </Heading>
+      </Flex>
+    </Container>
   </Menu>
 )
 

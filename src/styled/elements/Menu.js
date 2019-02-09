@@ -8,6 +8,7 @@ const Menu = styled.nav(props => css`
   width: 100%;
   display: flex;
   transition: background-color 300ms linear;
+  z-index: 1000;
 `)
 
 export default Menu

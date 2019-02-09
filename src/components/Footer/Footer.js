@@ -25,7 +25,7 @@ const Footer = () => (
       }
     `}
     render={data => 
-      <Box bg="purple" as="footer">
+      <Box bg="primary" as="footer">
         <Container pt={5} pb={4} px={3}>
           <Flex flexWrap='wrap' flexDirection='column'>
             {data.generalJson.footer.elements.map((element, index) => (
@@ -42,7 +42,7 @@ const Footer = () => (
           </Flex>
         </Container>
         <Box 
-          bg="purple"
+          bg="primaryDark"
           >
           <Container py={3}>
             <P 
