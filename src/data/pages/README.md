@@ -20,8 +20,6 @@ cd magicsoup-starter && yarn && npm start
 
 ## What's special about our magicsoup.io starter?
 
-## What's included?
-
 ### 1. Optimized Images
 No more large, unoptimized images which dramatically slow down your site. The starter uses [gatsby-image](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image) for optimized image loading.
 
